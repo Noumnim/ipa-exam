@@ -272,7 +272,7 @@ function ResultsPage({ results, answers, onRetry }) {
       </div>
 
       {/* Part totals */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 24 }}>
+      <div className="part-totals-grid">
         {[
           { label: 'Part 1 Total', score: part1Total, max: 1475, min: PART1_MIN_TOTAL, pass: part1Pass },
           { label: 'Part 2 Total', score: part2Total, max: 875, min: PART2_MIN_TOTAL, pass: part2Pass },

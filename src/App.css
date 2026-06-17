@@ -493,4 +493,110 @@
   transition: all .15s;
 }
 .ref-link:hover { background: #dbeafe; border-color: #93c5fd; }
+
+.part-totals-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — Tablet  (≤ 900px)
+   ═══════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — Mobile  (≤ 640px)
+   ═══════════════════════════════════════════ */
+@media (max-width: 640px) {
+
+  /* Header */
+  .app-header { padding: 0 14px; }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .brand { gap: 10px; }
+  .brand-badge { font-size: 13px; padding: 4px 8px; }
+  .brand-title { font-size: 15px; }
+  .brand-sub { font-size: 11px; }
+
+  .tab-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .tab-btn { justify-content: center; padding: 9px 8px; font-size: 14px; border-radius: 8px; background: rgba(255,255,255,.1); }
+  .tab-btn.active { background: rgba(255,255,255,.22); }
+
+  /* Main padding */
+  .app-main { padding: 16px 12px 40px; }
+
+  /* ── Exam ── */
+  .exam-topbar {
+    flex-wrap: wrap;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+  .exam-progress-wrap { flex: 1 1 100%; order: 1; }
+  .exam-timer { order: 2; font-size: 18px; }
+  .exam-submit-btn { order: 3; flex: 1; text-align: center; }
+
+  .exam-start { padding: 24px 16px; }
+  .exam-start h2 { font-size: 20px; }
+
+  .exam-info-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .exam-info-card { padding: 12px 14px; }
+  .exam-info-card .ei-value { font-size: 18px; }
+
+  .exam-section-header { flex-wrap: wrap; gap: 8px; }
+  .exam-section-header h3 { font-size: 15px; }
+  .sec-meta { display: none; }
+
+  .question-card { padding: 14px 14px; }
+  .question-text { font-size: 13.5px; }
+  .option-btn { font-size: 13px; padding: 9px 12px; }
+
+  /* ── Results ── */
+  .results-grid { grid-template-columns: 1fr; }
+  .part-totals-grid { grid-template-columns: 1fr; }
+
+  .result-hero { padding: 28px 16px 24px; }
+  .result-verdict { font-size: 40px; }
+  .result-hero h2 { font-size: 22px; }
+
+  .results-page > div[style] { grid-template-columns: 1fr !important; }
+
+  /* ── Learn ── */
+  .learn-header h2 { font-size: 20px; }
+
+  .learn-filter { gap: 6px; }
+  .filter-btn { font-size: 12px; padding: 6px 12px; }
+
+  .topic-card-header { padding: 14px; gap: 10px; }
+  .topic-card-header h3 { font-size: 14px; }
+  .topic-icon { width: 36px; height: 36px; font-size: 18px; }
+
+  .topic-card-body-inner { padding: 14px; }
+  .topic-summary { font-size: 13px; }
+  .key-points li { font-size: 12.5px; }
+  .ref-link { font-size: 12px; }
+
+  /* Confirm dialog */
+  .btn-primary, .btn-outline { padding: 10px 16px; font-size: 14px; }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — Small mobile  (≤ 400px)
+   ═══════════════════════════════════════════ */
+@media (max-width: 400px) {
+  .brand-sub { display: none; }
+  .exam-info-grid { grid-template-columns: 1fr; }
+  .tab-btn { font-size: 13px; padding: 8px 6px; }
+}
 .ref-link-icon { font-size: 14px; flex-shrink: 0; }
